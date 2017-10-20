@@ -9,17 +9,11 @@ const {
   Shape,
 } = ART;
 
-
-
-
-const AnimationDurationMs = 250;
+const AnimationDurationMs = 100;
 
 export default class AnimShape extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      path: '',
-    }
+  state = {
+    path: '',
   }
 
   componentWillMount() {
@@ -68,13 +62,11 @@ export default class AnimShape extends Component {
       );
 
       this.setState({
-        // Create the ART Morph.Tween instance.
-        path: Morph.Tween( // eslint-disable-line new-cap
+        path: Morph.Tween(
           pathFrom,
           pathTo,
         ),
       }, () => {
-        // Kick off our animations!
         this.animate();
       });
 
