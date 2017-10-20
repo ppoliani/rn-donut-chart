@@ -146,7 +146,7 @@ class Pie extends Component {
     const selectedValue = this.props.data[this.state.highlightedIndex];
 
     return (
-      <View width={width} height={height}>
+      <View width={width} height={height} style={{backgroundColor: 'transparent'}}>
         <View style={this.getTextStyles()}
           width={pieWidth / 2}
           height={pieHeight / 2}>
@@ -169,7 +169,8 @@ class Pie extends Component {
 const _styles = {
   container: {
     marginTop: 40,
-    marginLeft: 40
+    marginLeft: 25,
+    backgroundColor: 'transparent'
   },
   label: {
     fontSize: 15,

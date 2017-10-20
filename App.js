@@ -33,8 +33,8 @@ export default class App extends Component {
   }
 
   render() {
-    const height = 500;
-    const width = 500;
+    const height = 360;
+    const width = 350;
 
     return (
       <ScrollView>
